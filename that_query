@@ -1,4 +1,5 @@
 ```sql
+
 SELECT
   monthname(date(pa.data_transacao)) AS mes,
   count(DISTINCT pa.id) AS clientes,
