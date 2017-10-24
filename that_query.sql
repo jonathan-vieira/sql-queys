@@ -1,5 +1,3 @@
-```sql
-
 SELECT
   monthname(date(pa.data_transacao)) AS mes,
   count(DISTINCT pa.id) AS clientes,
@@ -67,5 +65,4 @@ FROM (
               FROM vendas_transacao
               WHERE StatusTransacao = 'Completo' AND ProdValor_1 > 0
               GROUP BY empresa_id) AS a ON a.empresa_id = ve.id
-  LEFT JOIN vendas_transacao AS pa ON pa.id = a.id; 
-```
+  LEFT JOIN vendas_transacao AS pa ON pa.id = a.id;
