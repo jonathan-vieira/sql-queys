@@ -1,4 +1,3 @@
-```ruby
 SELECT
   count(DISTINCT clientes.id) as clientes,
   monthname(clientes.data) as mes_de_pagamento,
@@ -22,4 +21,3 @@ FROM
      AND tipo_transacao NOT IN (3, 4, 6) AND StatusTransacao IN ('Completo') AND ProdValor_1 > 0 AND data_transacao <= '2017-09-30'
   ) AS clientes
 GROUP BY 2;
-```
